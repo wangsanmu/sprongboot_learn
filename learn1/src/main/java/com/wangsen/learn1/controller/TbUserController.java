@@ -38,6 +38,10 @@ public class TbUserController {
         return tbUserService.selectList(new EntityWrapper<TbUser>());
     }
 
+    /**
+     * 测试分页
+     * @return
+     */
     @GetMapping(value = "/getUserByPage")
     public Object getUserByPage(){
         Page<TbUser> tbUserPage =  tbUserService.selectPage(new Page<TbUser>(1,2));
