@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wangsen.learn1.mapper.TbUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wangsen.learn1.entity.TbUser">
+        <id column="u_id" property="uId" />
+        <result column="u_name" property="uName" />
+        <result column="u_account_name" property="uAccountName" />
+        <result column="u_password" property="uPassword" />
+        <result column="u_delete_status" property="uDeleteStatus" />
+        <result column="u_locked" property="uLocked" />
+        <result column="u_description" property="uDescription" />
+        <result column="u_credentials_salt" property="uCredentialsSalt" />
+        <result column="u_creator_name" property="uCreatorName" />
+        <result column="u_create_time" property="uCreateTime" />
+        <result column="u_update_time" property="uUpdateTime" />
+        <result column="u_dept_id" property="uDeptId" />
+        <result column="u_img" property="uImg" />
+        <result column="u_email" property="uEmail" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        u_id, u_name, u_account_name, u_password, u_delete_status, u_locked, u_description, u_credentials_salt, u_creator_name, u_create_time, u_update_time, u_dept_id, u_img, u_email
+    </sql>
+
+</mapper>
