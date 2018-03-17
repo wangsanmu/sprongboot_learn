@@ -10,6 +10,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -24,4 +25,14 @@ public class TbUserServiceImpl extends ServiceImpl<TbUserMapper, TbUser> impleme
 
     @Autowired
     private TbUserMapper tbUserMapper;
+
+    @Override
+    public List<TbUser> getAllUser(TbUser user){
+        return tbUserMapper.getAllUser(user);
+    }
+
+    @Override
+    public TbUser selectUserRole(Map<String, Object> parameter) {
+        return tbUserMapper.selectUserRole(parameter);
+    }
 }

@@ -35,4 +35,9 @@ public class TbUserControllerTest {
        Page<TbUser> tbUserPage =  tbUserService.selectPage(new Page<TbUser>(1,2));
         System.out.println(tbUserPage.getRecords());
     }
+
+    @Test
+    public void addUser() {
+
+    }
 }

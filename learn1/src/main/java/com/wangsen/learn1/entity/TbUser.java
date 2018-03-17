@@ -1,8 +1,11 @@
 package com.wangsen.learn1.entity;
 
+import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.enums.IdType;
 import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableId;
+
+import javax.management.relation.Role;
 import java.io.Serializable;
 
 /**
@@ -66,6 +69,16 @@ public class TbUser implements Serializable {
     private String uImg;
     private String uEmail;
 
+    @TableField(exist = false)
+    private TbRole tbRole;
+
+    public TbRole getTbRole() {
+        return tbRole;
+    }
+
+    public void setTbRole(TbRole tbRole) {
+        this.tbRole = tbRole;
+    }
 
     public Integer getuId() {
         return uId;
